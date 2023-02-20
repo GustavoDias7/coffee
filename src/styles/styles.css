@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* a {
+  transition: 0.3s;
+} */
+
+/* a:hover,
+a:focus {
+  opacity: 0.75;
+} */
+a {
+  outline: none;
+}
+
+.banner {
+  /* background-image: url("../images/banner.jpg"); */
+}
