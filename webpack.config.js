@@ -2,13 +2,12 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    home: "./src/js/home.js",
+    home: "./src/js/pages/home.js",
   },
   // devtool: "inline-source-map",
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./public/js"),
-    libraryTarget: "umd",
+    path: path.resolve(__dirname, "./public/js/"),
   },
   mode: "production",
   module: {

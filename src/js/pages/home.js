@@ -1,4 +1,4 @@
-import Vue from "./vue";
+import Vue from "../vendor/vue";
 
 var app = new Vue({
   el: "#app",
