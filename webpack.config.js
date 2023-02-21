@@ -1,9 +1,11 @@
 const path = require("path");
+const glob = require("glob");
 
 module.exports = {
-  entry: {
-    home: "./src/js/pages/home.js",
-  },
+  entry: glob.sync("./src/js/pages/**.js").reduce((obj, el) => {
+    obj[path.parse(el).name] = el;
+    return obj;
+  }, {}),
   // devtool: "inline-source-map",
   output: {
     filename: "[name].js",
