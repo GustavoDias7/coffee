@@ -18,7 +18,7 @@
   </div>
 </header>
  
-<main class="banner bg-beige bg-cover bg-no-repeat bg-center">
+<main class="banner bg-beige-300 bg-cover bg-no-repeat bg-center">
   <div class="container h-[688px] flex items-center">
     <div
       class="w-full max-w-md bg-[#292524d3] rounded-2xl p-8 text-neutral-100"
@@ -43,7 +43,7 @@
 <section class="py-8 sm:py-16">
   <div class="container">
     <h2
-      class="text-4xl sm:text-5xl text-neutral-800 font-bold text-center mb-16"
+      class="text-4xl sm:text-6xl text-neutral-800 font-bold text-center mb-16"
     >
       Coffee & Cakes
     </h2>
@@ -57,7 +57,7 @@
           discretion led. Oh feel if up to till like.
         </p>
         <div
-          class="bg-beige p-8 rounded-xl text-neutral-100 text-center shadow-lg"
+          class="bg-beige-300 p-8 rounded-xl text-neutral-100 text-center shadow-lg"
         >
           <p class="font-bold text-lg mb-5">
             Our coffee is rich in flavor and the espresso is a perfect balance
@@ -71,7 +71,7 @@
       </div>
       <div class="max-w-md">
         <div
-          class="bg-beige p-8 mb-8 rounded-xl text-neutral-100 text-center shadow-lg"
+          class="bg-beige-300 p-8 mb-8 rounded-xl text-neutral-100 text-center shadow-lg"
         >
           <p class="font-bold text-lg mb-5">
             Our coffee is rich in flavor and the espresso is a perfect balance
@@ -94,18 +94,18 @@
   </div>
 </section>
  
-<section class="bg-beige">
+<section class="bg-beige-300">
   <div class="container h-[678px] flex items-end">
   </div>
 </section>
 <section>
-  <div class="container pb-12 mt-[-120px] sm:mt-[-96px]">
+  <div class="container pb-16 mt-[-120px] sm:mt-[-96px]">
     <div class="grid-container">
       <div class="col w-full sm:w-1/2 lg:w-1/4">
         <div 
           class="py-6 px-8 shadow-xl text-neutral-800 bg-neutral-100 rounded-lg"
         >
-          <p class="text-beige text-5xl font-bold mb-4">01</p>
+          <p class="text-beige-300 text-5xl font-bold mb-4">01</p>
           <h3 class="text-xl font-bold mb-4">About Us</h3>
           <p class="italic">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -117,7 +117,7 @@
         <div
           class="py-6 px-8 shadow-xl text-neutral-800 bg-neutral-100 rounded-lg"
         >
-          <p class="text-beige text-5xl font-bold mb-4">02</p>
+          <p class="text-beige-300 text-5xl font-bold mb-4">02</p>
           <h3 class="text-xl font-bold mb-4">Our Food</h3>
           <p class="italic">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -129,7 +129,7 @@
         <div
           class="py-6 px-8 shadow-xl text-neutral-800 bg-neutral-100 rounded-lg"
         >
-          <p class="text-beige text-5xl font-bold mb-4">03</p>
+          <p class="text-beige-300 text-5xl font-bold mb-4">03</p>
           <h3 class="text-xl font-bold mb-4">Our Drinks</h3>
           <p class="italic">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -141,7 +141,7 @@
         <div
           class="py-6 px-8 shadow-xl text-neutral-800 bg-neutral-100 rounded-lg"
         >
-          <p class="text-beige text-5xl font-bold mb-4">04</p>
+          <p class="text-beige-300 text-5xl font-bold mb-4">04</p>
           <h3 class="text-xl font-bold mb-4">Excellent coffee</h3>
           <p class="italic">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -150,6 +150,45 @@
         </div>
       </div>
     </div></div>
+</section>
+ 
+<section class="py-8 sm:py-16 bg-beige-300">
+  <div class="container">
+    <h2
+      class="text-4xl sm:text-6xl text-neutral-100 font-bold text-center mb-16"
+    >
+      Popular Dishes
+    </h2>
+    <div class="max-w-xs sm:max-w-2xl lg:max-w-5xl mx-auto">
+      <div class="grid-container">
+        <article v-for="item in [0,0,0,0,0,0]" class="col sm:w-1/2 lg:w-1/3">
+          <div class="bg-neutral-100 rounded-2xl overflow-hidden shadow-lg">
+            <header>
+              <img src="" alt="" class="w-full h-[243px]" />
+            </header>
+            <section class="px-6 pt-6">
+              <h3 class="text-2xl text-beige-300 font-bold uppercase mb-4">
+                tiramisu cake
+              </h3>
+              <p>
+                Sample text. Click to select the text box. Click again or double
+                click to start editing the text.
+              </p>
+            </section>
+            <footer class="flex items-center justify-between px-6 py-6">
+              <p class="text-2xl text-beige-300 font-bold">$10.00</p>
+
+              <a
+                class="flex items-center justify-center w-40 h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 transition duration-300 ease-in-out"
+                href="/"
+                >Compre agora</a
+              >
+            </footer>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 </section>
  
       <script type="text/javascript" src="./js/home.js"></script>
