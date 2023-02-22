@@ -555,6 +555,22 @@ video {
   position: static;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -630,6 +646,10 @@ video {
 
 .h-\[320px\] {
   height: 320px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-40 {
@@ -743,6 +763,11 @@ video {
   background-repeat: no-repeat;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -773,6 +798,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[75\%\] {
+  padding-top: 75%;
 }
 
 .text-center {
