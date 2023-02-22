@@ -12,6 +12,10 @@ a:focus {
   /* background-image: url("../images/banner.jpg"); */
 }
 
+.infos {
+  background-image: url("../images/coffee-3.jpg");
+}
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
