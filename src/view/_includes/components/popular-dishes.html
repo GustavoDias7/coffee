@@ -7,12 +7,13 @@
     </h2>
     <div class="max-w-xs sm:max-w-2xl lg:max-w-5xl mx-auto">
       <div class="grid-container">
-        <article v-for="item in [0,0,0,0,0,0]" class="col sm:w-1/2 lg:w-1/3">
+        {% for dishe in products.dishes %}
+        <article class="col sm:w-1/2 lg:w-1/3">
           <div class="bg-neutral-100 rounded-2xl overflow-hidden shadow-lg">
             <header>
-              <figure class="pt-[75%] relative bg-beige-300">
+              <figure class="pt-[66.66%] relative bg-beige-300">
                 <img
-                  src="./images/popular-dishes-1.jpg"
+                  src="./images/{{dishe.image}}"
                   alt=""
                   class="absolute top-0 left-0 w-full h-full object-cover"
                 />
@@ -20,24 +21,22 @@
             </header>
             <section class="px-6 pt-6">
               <h3 class="text-2xl text-beige-300 font-bold uppercase mb-4">
-                tiramisu cake
+                {{dishe.title}}
               </h3>
-              <p>
-                Sample text. Click to select the text box. Click again or double
-                click to start editing the text.
-              </p>
+              <p>{{dishe.description}}</p>
             </section>
             <footer class="flex items-center justify-between px-6 py-6">
-              <p class="text-2xl text-beige-300 font-bold">$10.00</p>
+              <p class="text-2xl text-beige-300 font-bold">R${{dishe.price}}</p>
 
               <a
                 class="flex items-center justify-center w-40 h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 transition duration-300 ease-in-out"
-                href="/"
+                href="{{dishe.link}}"
                 >Compre agora</a
               >
             </footer>
           </div>
         </article>
+        {% endfor %}
       </div>
     </div>
   </div>
