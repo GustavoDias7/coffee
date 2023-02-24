@@ -772,6 +772,11 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-beige-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 186 162 / var(--tw-bg-opacity));
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -825,6 +830,11 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .pb-16 {
@@ -911,6 +921,10 @@ video {
 .text-zinc-400 {
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .shadow {
@@ -1025,6 +1039,14 @@ a:focus {
   opacity: 0.6;
 }
 
+.hover\:opacity-70:hover {
+  opacity: 0.7;
+}
+
+.hover\:opacity-40:hover {
+  opacity: 0.4;
+}
+
 .focus\:bg-beige-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(229 220 208 / var(--tw-bg-opacity));
@@ -1052,6 +1074,10 @@ a:focus {
 
 .focus\:opacity-60:focus {
   opacity: 0.6;
+}
+
+.focus\:opacity-70:focus {
+  opacity: 0.7;
 }
 
 @media (min-width: 640px) {
