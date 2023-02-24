@@ -1013,6 +1013,18 @@ a:focus {
   color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
+.hover\:opacity-0:hover {
+  opacity: 0;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
+.hover\:opacity-60:hover {
+  opacity: 0.6;
+}
+
 .focus\:bg-beige-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(229 220 208 / var(--tw-bg-opacity));
@@ -1036,6 +1048,10 @@ a:focus {
 .focus\:text-neutral-900:focus {
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
+}
+
+.focus\:opacity-60:focus {
+  opacity: 0.6;
 }
 
 @media (min-width: 640px) {
