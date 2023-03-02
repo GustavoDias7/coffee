@@ -4,7 +4,10 @@
 
 a,
 a:hover,
-a:focus {
+a:focus,
+button,
+button:hover,
+button:focus {
   outline: none;
 }
 
@@ -26,4 +29,65 @@ a:focus {
 .col {
   padding-top: 1rem;
   padding-left: 1rem;
+}
+.contact-form li {
+  position: relative;
+  margin-bottom: 16px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  height: 55px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: #666;
+  font-size: 1rem;
+  padding: 1rem;
+  background-position: calc(100% - 16px) center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  transition: border 0.2s;
+  outline: none;
+}
+.contact-form input:hover,
+.contact-form input:focus,
+.contact-form select:hover,
+.contact-form select:focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+  border: 2px solid #bfa98b;
+}
+.contact-form input[type="checkbox"],
+.contact-form input[type="radio"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+/* invalid input */
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+  border: 1px solid #eb5757;
+}
+.contact-form input.invalid:focus,
+.contact-form input.invalid:hover,
+.contact-form textarea.invalid:focus,
+.contact-form textarea.invalid:hover {
+  border: 2px solid #eb5757;
+}
+.contact-form input ~ p.invalid-message,
+.contact-form textarea ~ p.invalid-message {
+  display: block;
+  font-size: 0.75rem;
+  padding: 2px 12px 0px;
+  color: #eb5757;
+}
+.contact-form input.invalid ~ p.invalid-message,
+.contact-form textarea.invalid ~ p.invalid-message {
+  display: block;
+}
+
+/* textarea */
+.contact-form textarea {
+  height: 126px;
+  resize: none;
 }

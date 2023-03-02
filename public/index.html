@@ -390,6 +390,88 @@
   </div>
 </section>
  
+<section class="pt-16 md:pt-0">
+  <div>
+    <div
+      class="contact-form flex md:gap-8 items-center justify-center flex-col md:flex-row"
+    >
+      <div>
+        <img
+          class="w-full max-w-xl h-full"
+          src="./images/person-2.jpg"
+          alt="Coffee"
+        />
+      </div>
+      <form
+        @submit.prevent="handleContact()"
+        class="w-full max-w-lg pt-8 pb-16 px-6 md:px-0"
+      >
+        <h2
+          class="text-4xl text-neutral-800 font-bold text-center mb-8 sm:mb-8"
+        >
+          Contact Us
+        </h2>
+        <ul>
+          <li>
+            <input
+              id="name"
+              type="text"
+              placeholder="Name"
+              :class="isValid('name')"
+              v-model="contact.name"
+              @blur="validate('name')"
+              @keypress="validate('name')"
+            />
+            <p
+              class="invalid-message"
+              v-if="!!errors.name"
+              v-html="errors.name"
+            ></p>
+          </li>
+          <li>
+            <input
+              id="email"
+              type="text"
+              placeholder="Email"
+              :class="isValid('email')"
+              v-model="contact.email"
+              @blur="validate('email')"
+              @keypress="validate('email')"
+            />
+            <p
+              class="invalid-message"
+              v-if="!!errors.email"
+              v-html="errors.email"
+            ></p>
+          </li>
+          <li>
+            <textarea
+              id="message"
+              placeholder="Message"
+              :class="isValid('message')"
+              v-model="contact.message"
+              @blur="validate('message')"
+              @keypress="validate('message')"
+            ></textarea>
+            <p
+              class="invalid-message"
+              v-if="!!errors.message"
+              v-html="errors.message"
+            ></p>
+          </li>
+          <li>
+            <button
+              class="flex items-center justify-center w-full h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 duration-300 ease-in-out"
+            >
+              Compre agora
+            </button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</section>
+ 
 <footer class="py-16 bg-beige-300">
   <div class="container">
     <a
