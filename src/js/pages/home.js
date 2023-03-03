@@ -6,9 +6,9 @@ var app = new Vue({
   el: "#app",
   data: {
     contact: {
-      name: "Name",
-      email: "emial@email.com",
-      message: "test message",
+      name: "",
+      email: "",
+      message: "",
     },
     errors: {
       name: "",
