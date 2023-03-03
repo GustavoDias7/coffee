@@ -1,3 +1,5 @@
+{% import "components/field.html" as field %}
+
 <section class="pt-16 md:pt-0">
   <div>
     <div
@@ -20,58 +22,19 @@
           Contact Us
         </h2>
         <ul>
+          <li>{{ field.input(name='name', placeholder="Your name") }}</li>
+          <li>{{ field.input(name='email', placeholder="Your e-mail") }}</li>
           <li>
-            <input
-              id="name"
-              type="text"
-              placeholder="Name"
-              :class="isValid('name')"
-              v-model="contact.name"
-              @blur="validate('name')"
-              @keypress="validate('name')"
-            />
-            <p
-              class="invalid-message"
-              v-if="!!errors.name"
-              v-html="errors.name"
-            ></p>
-          </li>
-          <li>
-            <input
-              id="email"
-              type="text"
-              placeholder="Email"
-              :class="isValid('email')"
-              v-model="contact.email"
-              @blur="validate('email')"
-              @keypress="validate('email')"
-            />
-            <p
-              class="invalid-message"
-              v-if="!!errors.email"
-              v-html="errors.email"
-            ></p>
-          </li>
-          <li>
-            <textarea
-              id="message"
-              placeholder="Message"
-              :class="isValid('message')"
-              v-model="contact.message"
-              @blur="validate('message')"
-              @keypress="validate('message')"
-            ></textarea>
-            <p
-              class="invalid-message"
-              v-if="!!errors.message"
-              v-html="errors.message"
-            ></p>
+            {{ field.input(tag="textarea", placeholder="Your message",
+            name='message') }}
           </li>
           <li>
             <button
-              class="flex items-center justify-center w-full h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 duration-300 ease-in-out"
+              class="flex items-center justify-center w-full h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 disabled:text-neutral-600 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 disabled:bg-neutral-300 duration-300 ease-in-out"
+              :disabled="loading.contact"
+              v-html="loading.contact ? 'Sending...' : 'Send'"
             >
-              Compre agora
+              Send
             </button>
           </li>
         </ul>

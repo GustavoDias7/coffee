@@ -1,0 +1,30 @@
+{% macro input(name='', placeholder='', type='text', tag='input') %} {% if tag
+=== 'input' %}
+<input
+  type="{{ type }}"
+  name="{{ name }}"
+  id="{{ name }}"
+  placeholder="{{ placeholder }}"
+  :class="isValid('{{ name }}')"
+  v-model="contact.{{ name }}"
+  @blur="validate('{{ name }}')"
+  @keypress="validate('{{ name }}')"
+/>
+{% else %}
+<textarea
+  name="{{ name }}"
+  id="{{ name }}"
+  placeholder="{{ placeholder }}"
+  :class="isValid('{{ name }}')"
+  v-model="contact.{{ name }}"
+  @blur="validate('{{ name }}')"
+  @keypress="validate('{{ name }}')"
+></textarea>
+{% endif %}
+
+<p
+  class="invalid-message"
+  v-if="!!errors.{{ name }}"
+  v-html="errors.{{ name }}"
+></p>
+{% endmacro %}

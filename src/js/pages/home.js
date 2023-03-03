@@ -6,14 +6,20 @@ var app = new Vue({
   el: "#app",
   data: {
     contact: {
-      name: "",
-      message: "",
-      email: "",
+      name: "Name",
+      email: "emial@email.com",
+      message: "test message",
     },
     errors: {
       name: "",
-      message: "",
       email: "",
+      message: "",
+    },
+    modals: {
+      contact: false,
+    },
+    loading: {
+      contact: false,
     },
   },
   methods: {
@@ -22,7 +28,12 @@ var app = new Vue({
       schema
         .validate(contact, { abortEarly: false })
         .then(() => {
-          const submittedData = `${this.contact.name} ${this.contact.message}`;
+          this.handleLoading("contact", true);
+          setTimeout(() => {
+            this.handleLoading("contact", false);
+            this.contact = contactFactory({});
+            this.openModal("contact");
+          }, 3000);
         })
         .catch((err) => {
           err.inner.forEach((error) => {
@@ -40,6 +51,15 @@ var app = new Vue({
     },
     isValid(field = "") {
       return this.errors[field] ? "invalid" : "";
+    },
+    openModal(modalName = "") {
+      modalName && (this.modals[modalName] = true);
+    },
+    closeModal(modalName = "") {
+      modalName && (this.modals[modalName] = false);
+    },
+    handleLoading(loadingName, isLoading) {
+      this.loading[loadingName] = isLoading;
     },
   },
 });
