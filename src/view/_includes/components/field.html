@@ -7,8 +7,8 @@
   placeholder="{{ placeholder }}"
   :class="isValid('{{ name }}')"
   v-model="contact.{{ name }}"
-  @blur="validate('{{ name }}')"
-  @keypress="validate('{{ name }}')"
+  @blur="onBlur"
+  @input="onChange"
 />
 {% else %}
 <textarea
@@ -17,14 +17,14 @@
   placeholder="{{ placeholder }}"
   :class="isValid('{{ name }}')"
   v-model="contact.{{ name }}"
-  @blur="validate('{{ name }}')"
-  @keypress="validate('{{ name }}')"
+  @blur="onBlur"
+  @input="onChange"
 ></textarea>
 {% endif %}
 
 <p
   class="invalid-message"
-  v-if="!!errors.{{ name }}"
-  v-html="errors.{{ name }}"
+  v-if="touched.{{ name }} && !!errors.{{ name }}"
+  v-text="errors.{{ name }}"
 ></p>
 {% endmacro %}

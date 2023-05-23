@@ -15,6 +15,11 @@ var app = new Vue({
       email: "",
       message: "",
     },
+    touched: {
+      name: false,
+      email: false,
+      message: false,
+    },
     modals: {
       contact: false,
     },
@@ -32,11 +37,13 @@ var app = new Vue({
           setTimeout(() => {
             this.handleLoading("contact", false);
             this.contact = contactFactory({});
+            this.touched = { name: false, email: false, message: false };
             this.openModal("contact");
           }, 3000);
         })
         .catch((err) => {
           err.inner.forEach((error) => {
+            this.touched[error.path] = true;
             this.errors = { ...this.errors, [error.path]: error.message };
           });
         });
@@ -48,6 +55,13 @@ var app = new Vue({
         .catch((err) => {
           this.errors[err.path] = err.message;
         });
+    },
+    onChange({ target }) {
+      if (this.touched[target.name]) this.validate(target.name);
+    },
+    onBlur({ target }) {
+      if (!this.touched[target.name]) this.touched[target.name] = true;
+      this.validate(target.name);
     },
     isValid(field = "") {
       return this.errors[field] ? "invalid" : "";
