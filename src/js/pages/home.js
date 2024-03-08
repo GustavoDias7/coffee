@@ -2,7 +2,7 @@ import { contactFactory } from "../factories/factory";
 import { schema } from "../utils/schema";
 import Vue from "../vendor/vue";
 
-var app = new Vue({
+new Vue({
   el: "#app",
   data: {
     contact: {

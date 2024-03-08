@@ -1,16 +1,15 @@
 {% import "components/button.html" as button %}
-<div class="modal" :class="modals.contact ? 'active' : ''">
+<div class="modal" :class="{active: modals.contact}">
   <div class="content">
     <button class="close" @click="closeModal('contact')"></button>
-    <h2 class="text-2xl text-beige-300 font-bold mb-4">Email sent!</h2>
+    <h2 class="text-2xl text-beige-300 font-bold mb-4">E-mail enviado!</h2>
     <p class="mb-4 text-lg">
-      Please wait a few minutes. Our support team will contact you.
+      Por favor espere alguns minutos. Nosso time de suporte entrará em contato.
     </p>
     <button
       class="flex items-center justify-center w-full h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 duration-300 ease-in-out"
-      @click="closeModal('contact')"
-    >
-      Close
+      @click="closeModal('contact')">
+      Fechar
     </button>
   </div>
 </div>

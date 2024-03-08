@@ -2,39 +2,26 @@
 
 <section class="pt-16 md:pt-0">
   <div>
-    <div
-      class="contact-form flex md:gap-8 items-center justify-center flex-col md:flex-row"
-    >
+    <div class="contact-form flex md:gap-8 items-center justify-center flex-col md:flex-row">
       <div>
-        <img
-          class="w-full max-w-xl h-full"
-          src="./images/person-2.jpg"
-          alt="Coffee"
-        />
+        <img class="w-full max-w-xl h-full" src="./images/person-2.jpg" alt="Coffee" />
       </div>
-      <form
-        @submit.prevent="handleContact()"
-        class="w-full max-w-lg pt-8 pb-16 px-6 md:px-0"
-      >
-        <h2
-          class="text-4xl text-neutral-800 font-bold text-center mb-8 sm:mb-8"
-        >
-          Contact Us
+      <form @submit.prevent="handleContact()" class="w-full max-w-lg pt-8 pb-16 px-6 md:px-0">
+        <h2 class="text-4xl text-neutral-800 font-bold text-center mb-8 sm:mb-8">
+          Contate-nos
         </h2>
         <ul>
-          <li>{{ field.input(name='name', placeholder="Your name") }}</li>
-          <li>{{ field.input(name='email', placeholder="Your e-mail") }}</li>
+          <li>{{ field.input(name='name', placeholder="Seu nome") }}</li>
+          <li>{{ field.input(name='email', placeholder="Seu e-mail") }}</li>
           <li>
-            {{ field.input(tag="textarea", placeholder="Your message",
+            {{ field.input(tag="textarea", placeholder="Sua mensagem",
             name='message') }}
           </li>
           <li>
             <button
               class="flex items-center justify-center w-full h-12 rounded-full text-neutral-100 hover:text-beige-400 focus:text-beige-400 disabled:text-neutral-600 font-bold bg-beige-300 hover:bg-beige-50 focus:bg-beige-50 disabled:bg-neutral-300 duration-300 ease-in-out"
-              :disabled="loading.contact"
-              v-text="loading.contact ? 'Sending...' : 'Send'"
-            >
-              Send
+              :disabled="loading.contact" v-text="loading.contact ? 'Enviando...' : 'Enviar'">
+              Enviar
             </button>
           </li>
         </ul>
