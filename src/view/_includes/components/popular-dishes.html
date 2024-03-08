@@ -1,6 +1,6 @@
-<section class="py-8 sm:py-16 bg-beige-300">
+<section class="py-8 sm:py-16">
   <div class="container">
-    <h2 class="text-4xl sm:text-6xl text-neutral-100 font-bold text-center mb-8 sm:mb-16">
+    <h2 class="text-4xl sm:text-6xl text-neutral-800 font-bold text-center mb-8 sm:mb-16">
       Pratos Populares
     </h2>
     <div class="max-w-xs sm:max-w-2xl lg:max-w-5xl mx-auto">
@@ -10,7 +10,8 @@
           <div class="flex flex-col h-full bg-neutral-100 rounded-2xl overflow-hidden shadow-lg">
             <header>
               <figure class="pt-[66.66%] relative bg-beige-300">
-                <img src="./images/{{dishe.image}}" alt="" class="absolute top-0 left-0 w-full h-full object-cover" />
+                <img src="./images/{{dishe.image}}" alt="{{dishe.title}}"
+                  class="absolute top-0 left-0 w-full h-full object-cover" />
               </figure>
             </header>
             <section class="px-6 pt-6 mb-auto">
